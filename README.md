@@ -1,4 +1,4 @@
-# design-of-Dribble
+# Diseños de Dribble
 
 En este repositorio busco recrear con código ideas que encuentre en Dribble. :)
 
@@ -8,4 +8,8 @@ Inspiración: [https://dribbble.com/shots/19783582-Helloween-app]
 
 Imagen de Fondo: [https://dribbble.com/shots/19795193-Trick-or-Treat]
 
-Resultado: 
+[Código](Login.html)
+
+Resultado:
+![Imagen del resultado final](/Truuk or trick.png)
+
