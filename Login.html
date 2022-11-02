@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* DISTRIBUCIÓN DE ELEMENTOS */
+        
+        #phone {
+            border: 5px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 20px;
+            background-image: url(https://cdn.dribbble.com/userupload/3930248/file/original-da02fc4d530a043e287d88be05ca5055.jpg?compress=1&resize=752x);
+            background-repeat: no-repeat;
+            color: white;
+            height: 700px;
+            width: 350px;
+        }
+        /* Titulo y botón de salida */
+        
+        .titulo {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #title {
+            font-size: 2.5rem;
+        }
+        
+        #exit {
+            font-size: 1.5rem;
+            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #exit:hover {
+            background-color: white;
+            color: #38184C;
+            cursor: pointer;
+        }
+        /* Formulario */
+        
+        #formulario {
+            backdrop-filter: blur(10px);
+        }
+        
+        .formulario {
+            /* border: 3px solid #26182e; */
+            border-radius: 10px;
+            width: 270px;
+            height: 270px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .email,
+        .password {
+            width: 90%;
+            font-size: 1.6rem;
+        }
+        
+        .line:focus {
+            outline: none;
+        }
+        
+        .line {
+            width: 100%;
+            height: 30px;
+            background-color: inherit;
+            color: white;
+            border: inherit;
+            border-bottom: 1.5px solid white;
+        }
+        /* Crear registro */
+        
+        .sign-in {
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .sign-in:hover {
+            color: #38184C;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="phone">
+        <div class="titulo">
+            <p id="title">Sign In</p>
+            <div id="exit">
+                <p>X</p>
+            </div>
+        </div>
+
+        <div class="formulario" id="formulario">
+            <div class="email">
+                <p>Email</p>
+                <input class="line" placeholder="Type your email...">
+            </div>
+            <div class="password">
+                <p>Password</p>
+                <input class="line" placeholder="Type your password...">
+            </div>
+        </div>
+
+
+        <div class="sign-in">
+            <p>Sign Up</p>
+        </div>
+</body>
+
+</html>
