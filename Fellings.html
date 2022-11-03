@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+         :root {
+            --blue-: #CDEFF9;
+            --purple-: #8b4cfc;
+            --yellow-: #e8c135;
+            --lila-: #d9d1f8;
+            --rosa-mexicano: #e258c0;
+            --rosa-palo: #ffdff7;
+        }
+        
+        * {
+            font-family: 'Quicksand', 'Segoe UI';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--blue-);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Diseño telefono */
+        
+        .phone {
+            background-color: white;
+            border-radius: 30px;
+            height: 694px;
+            width: 321px;
+            display: flex;
+            /* padding: 20px; */
+            align-items: flex-start;
+            justify-content: start;
+            flex-direction: column;
+        }
+        /* Menu Superior */
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 30px 0px 0px 0px;
+        }
+        
+        .acount {
+            height: 40px;
+            width: 120px;
+            border-radius: 0px 15px 15px 0px;
+            background-color: var(--lila-);
+            padding: 0px 0px 0px 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .acount-circle {
+            border-radius: 50%;
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .acount-circle>img {
+            width: inherit;
+            padding: 5px;
+        }
+        
+        .menu #circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px 10px 10px;
+        }
+        
+        #circle-acount {
+            border-radius: 50%;
+            border: 3px solid black;
+            width: 25px;
+            height: 25px;
+        }
+        /* CONTENIDO */
+        
+        #content {
+            padding: 0px 20px 20px 20px;
+        }
+        /* Contenido Central */
+        
+        .content-central,
+        .content-bottom,
+        .estadisticas {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: baseline;
+        }
+        
+        .content-central>p,
+        .option-fellings>p,
+        .content-bottom>p {
+            font-size: 0.8rem;
+            color: gray;
+        }
+        
+        .content-central>p,
+        .content-bottom>p {
+            padding: 10px;
+        }
+        
+        .question-fellings>p {
+            font-size: 1.3rem;
+        }
+        
+        .question-fellings {
+            width: 100%;
+            background-color: var(--blue-);
+            border-radius: 25px;
+            padding: 20px;
+        }
+        
+        .options-question-fellings {
+            display: flex;
+            padding-bottom: 20px;
+            flex-flow: wrap;
+            justify-content: center;
+        }
+        
+        .option-fellings {
+            cursor: pointer;
+            height: max-content;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .emoji {
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+        
+        .emoji>img {
+            object-fit: contain;
+            width: inherit;
+            padding: 7px;
+        }
+        
+        .other-answer {
+            width: 100%;
+            height: max-content;
+        }
+        
+        .other-answer>input {
+            font-size: 0.8rem;
+            padding: 10px;
+            height: 30px;
+            outline: none;
+            border-radius: 25px;
+            border: inherit;
+        }
+        
+        .other-answer>button {
+            font-size: 0.8rem;
+            cursor: pointer;
+            width: 40px;
+            height: 30px;
+            outline: none;
+            border-radius: 25px;
+            border: inherit;
+            background-color: black;
+            color: white;
+        }
+        /* Contenido parte inferior */
+        
+        .estadisticas {
+            font-size: 0.8rem;
+            border-radius: 25px;
+            background-color: var(--rosa-palo);
+            width: 100%;
+            height: max-content;
+            padding: 15px;
+        }
+        
+        .estadisticas>p {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .graphic-sleep {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        
+        .graphic div {
+            border-radius: 50%;
+            padding: 3px;
+            width: max-content;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .graphic>div {
+            border: var(--purple-) 3px solid;
+        }
+        
+        .graphic>div>div {
+            border: var(--rosa-mexicano) 3px solid;
+        }
+        
+        .graphic>div>div>div {
+            border: var(--yellow-) 3px solid;
+            width: 25px;
+            height: 25px;
+        }
+        
+        .graphic {
+            padding: 5px;
+        }
+        
+        .sleep-estadisticas,
+        .sleep-estadisticas>div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .estadistica-color,
+        #info-sleep {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .estadistica-color>p {
+            font-size: 0.6rem;
+        }
+        
+        .estadistica-color>p:first-child {
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .rayita {
+            width: 5px;
+            height: 20px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        
+        #short-sleep {
+            background-color: var(--purple-);
+        }
+        
+        #deep-sleep {
+            background-color: var(--yellow-);
+        }
+        
+        #night-sleep {
+            background-color: var(--rosa-mexicano);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="phone" class="phone">
+        <div class="menu">
+            <div class="acount">
+                <div class="acount-circle">
+                    <img src="./Iconos/user.png" alt="">
+                </div>
+                <div class="acount-circle">
+                    <img src="./Iconos/menu.png" alt="">
+                </div>
+            </div>
+            <div id="circle">
+                <div id="circle-acount"></div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-central">
+                <p>Question based in your mood</p>
+                <div class="question-fellings">
+                    <p>Everthing falls in place when you feel grateful, why are you feel grateful?</p>
+                    <div class="options-question-fellings">
+                        <div id="option-sleep" class="option-fellings">
+                            <div class="emoji"><img src="./Iconos/emoji.png" alt=""></div>
+                            <p>Sleep</p>
+                        </div>
+                        <div id="option-weather" class="option-fellings">
+                            <div class="emoji"><img src="./Iconos/nube.png" alt=""></div>
+                            <p>Weather</p>
+                        </div>
+                        <div id="option-shopping" class="option-fellings">
+                            <div class="emoji"><img src="./Iconos/compras.png" alt=""></div>
+                            <p>Shopping</p>
+                        </div>
+                        <div id="option-party" class="option-fellings">
+                            <div class="emoji"><img src="./Iconos/fiesta.png" alt=""></div>
+                            <p>Party</p>
+                        </div>
+                        <div id="option-activity" class="option-fellings">
+                            <div class="emoji"><img src="./Iconos/actividad.png" alt=""></div>
+                            <p>Activity</p>
+                        </div>
+                    </div>
+                    <div class="other-answer">
+                        <input type="text" class="input-enter" placeholder="Other answer...">
+                        <button class="send-answer-button">Send</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-bottom">
+                <p>Recomendation based on mood</p>
+                <div class="estadisticas">
+                    <p>Improve your sleep</p>
+                    <div class="graphic-sleep">
+                        <div class="graphic">
+                            <div>
+                                <div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="info-sleep">
+                            <p>You wakeup 4 times during sleep which is not good</p>
+                            <a href="">Take a course</a>
+                        </div>
+
+                    </div>
+                    <div class="sleep-estadisticas">
+                        <div>
+                            <div class="rayita" id="short-sleep"></div>
+                            <div class="estadistica-color">
+                                <p>6 hr</p>
+                                <p>short sleep</p>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="rayita" id="deep-sleep"></div>
+                            <div class="estadistica-color">
+                                <p>2.2 hr</p>
+                                <p>deep sleep</p>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="rayita" id="night-sleep"></div>
+                            <div class="estadistica-color">
+                                <p>4 wakes</p>
+                                <p>during the night</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
